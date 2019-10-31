@@ -23,15 +23,43 @@
 
 /* Flex Layout Styles */
 
+body{
+   display: flex;
+   display: -webkit-flex;
+   flex-flow: row wrap;
+   -webkit-flex-flow: row wrap;
+}
 
+section#sheet{
+   flex:3 1 301px;
+   -webkit-flex: 3 1 301px;
+}
 
+article{
+   flex: 1 3 180px;
+   -webkit-flex: 1 3 180px;
+}
 
 
 /* ============================================
 	Mobile Devices: 0 - 480 pixels
    ============================================
 */
+@media only screen and ( max-width: 480px){
+   img.panel{
+      width: 100%;
+   }
 
+   nav.horizontal{
+     order: 99;
+   }
+
+   body > footer{
+      order:100;
+   }
+
+
+}
 
 
 
@@ -40,3 +68,15 @@
    ===================================================
 */
 
+@media only screen and (min-width 480px){
+   nav.horizontal ul{
+         display: flex;
+         display: -webkit-flex;
+         flex-flow: row wrap;
+         -webkit-flow: row wrap;
+      }
+   nav.horizontal ul li{
+      flex:1 1
+   }
+
+]
